@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="image/image.png">
+  <title>Crud</title>
+</head>
+
+<body>
+
+  <!-- Crud System -->
+  <div class="crud">
+    <h2>Crud</h2>
+    <p>Create | Read | Update | Delete</p>
+    <div class="head">
+      <input type="text" placeholder="The Name" id="title">
+      <div class="price">
+        <input type="number" placeholder="Price" id="price">
+        <input type="number" placeholder="Taxes" id="taxes">
+        <input type="number" placeholder="Ads" id="ads">
+        <input type="number" placeholder="Discount" id="discount">
+        <small class="total"></small>
+      </div>
+      <input type="number" placeholder="Count" id="count">
+      <input type="text" placeholder="Category" id="category">
+      <button class="main-btn theBtn">Create</button>
+    </div>
+    <div class="body">
+      <input type="text" placeholder="Search" id="search" onkeyup="searchData(this.value)">
+      <div class="search">
+        <button onclick="searchBtn(this.id)" class="main-btn search-title" id="searchTitle">Search By Title</button>
+        <button onclick="searchBtn(this.id)" class="main-btn search-caregory" id="searchCategory">Search By
+          Category</button>
+      </div>
+      <div class="btn-remove">
+      </div>
+    </div>
+  </div>
+
+  <div class="responsive-table">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>Ads</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Category</th>
+        <th>UpDate</th>
+        <th>Delete</th>
+      </tr>
+      <tbody id="thebody">
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
